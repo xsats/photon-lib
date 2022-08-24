@@ -1,4 +1,13 @@
-import { HDSegwitP2SHWallet, LegacyWallet, SegwitP2SHWallet, SegwitBech32Wallet, HDSegwitBech32Wallet, MultisigHDWallet } from './';
+import {
+  HDSegwitP2SHWallet,
+  LegacyWallet,
+  SegwitP2SHWallet,
+  SegwitBech32Wallet,
+  HDSegwitBech32Wallet,
+  MultisigHDWallet,
+  LightningCustodianWallet,
+  LightningLdkWallet,
+} from './';
 import * as keychain from '../keychain';
 
 const WALLETS = 'photon.wallets';
@@ -62,6 +71,12 @@ export class WalletStore {
               break;
             case MultisigHDWallet.type:
               unserializedWallet = MultisigHDWallet.fromJson(key);
+              break;
+            case LightningCustodianWallet.type:
+              unserializedWallet = LightningCustodianWallet.fromJson(key);
+              break;
+            case LightningLdkWallet.type:
+              unserializedWallet = LightningLdkWallet.fromJson(key);
               break;
             case LegacyWallet.type:
             default:
