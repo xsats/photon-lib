@@ -1,4 +1,4 @@
-import { randomBytes } from './rng';
+import { randomBytes } from '../rng';
 import { AbstractWallet } from './abstract-wallet';
 import { HDSegwitBech32Wallet } from './';
 import * as bitcoin from 'bitcoinjs-lib';

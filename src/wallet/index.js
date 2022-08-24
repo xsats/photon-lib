@@ -9,3 +9,5 @@ export * from './hd-segwit-bech32-wallet';
 export * from './hd-segwit-bech32-transaction';
 export * from './multisig-hd-wallet';
 export * from './multisig-cosigner';
+export * from './lightning-custodian-wallet';
+export * from './lightning-ldk-wallet';

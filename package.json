@@ -25,6 +25,7 @@
     "bip32": "^2.0.6",
     "bip39": "3.0.4",
     "bitcoinjs-lib": "^5.2.0",
+    "bolt11": "^1.4.0",
     "bs58check": "^2.1.2",
     "buffer-reverse": "^1.0.1",
     "chacha": "^2.1.0",
@@ -32,6 +33,8 @@
     "create-hash": "^1.2.0",
     "electrum-mnemonic": "^2.0.0",
     "frisbee": "^3.1.2",
+    "react-native-fs": "^2.20.0",
+    "rn-ldk": "github:BlueWallet/rn-ldk#v0.8.4",
     "util": "^0.12.3"
   },
   "peerDependencies": {
@@ -79,6 +82,15 @@
     "transform": {
       "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
     },
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts",
+      "tsx"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!((jest-)?react-native(-.*)?|@react-native(-community)?)/)"
+    ],
     "setupFiles": [
       "./__tests__/setup.js"
     ],

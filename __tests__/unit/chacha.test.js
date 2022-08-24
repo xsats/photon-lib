@@ -1,5 +1,5 @@
 import nodeCrypto from 'crypto';
-import { randomBytes } from '../../src/wallet/rng';
+import { randomBytes } from '../../src/rng';
 import * as chacha from '../../src/chacha';
 
 const IV_LEN = chacha.IV_LEN;

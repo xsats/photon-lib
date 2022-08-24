@@ -1,7 +1,7 @@
 import * as bip39 from 'bip39';
 import BigNumber from 'bignumber.js';
 import b58 from 'bs58check';
-import { randomBytes } from './rng';
+import { randomBytes } from '../rng';
 import { AbstractHDWallet } from './abstract-hd-wallet';
 import * as bitcoin from 'bitcoinjs-lib';
 import * as BlueElectrum from '../BlueElectrum';

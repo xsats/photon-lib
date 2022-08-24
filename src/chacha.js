@@ -4,7 +4,7 @@
  */
 
 import { createCipher, createDecipher } from 'chacha/browser';
-import { randomBytes } from './wallet/rng';
+import { randomBytes } from './rng';
 import { isBuffer } from './verify';
 
 export const KEY_LEN = 32; // size of the key in bytes
