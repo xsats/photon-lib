@@ -2,7 +2,12 @@ import mockAsyncStorage from '@react-native-async-storage/async-storage/jest/asy
 
 jest.mock('@react-native-async-storage/async-storage', () => mockAsyncStorage);
 
+global.net = require('net'); // needed by Electrum client. For RN it is proviced in shim.js
+global.tls = require('tls'); 
+
 jest.mock('@photon-sdk/react-native-icloudstore', () => mockAsyncStorage);
+
+jest.mock('react-native/Libraries/EventEmitter/NativeEventEmitter');
 
 jest.mock('react-native-keychain', () => {
   let IN_MEMORY_STORE = {};

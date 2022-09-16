@@ -2,7 +2,7 @@ import { randomBytes } from './rng';
 import { AbstractWallet } from './abstract-wallet';
 import { HDSegwitBech32Wallet } from './';
 import * as bitcoin from 'bitcoinjs-lib';
-import * as BlueElectrum from '../BlueElectrum';
+import * as BlueElectrum from '../blue_modules/BlueElectrum';
 import coinSelectAccumulative from 'coinselect/accumulative';
 import coinSelectSplit from 'coinselect/split';
 

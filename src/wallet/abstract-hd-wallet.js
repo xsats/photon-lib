@@ -1,6 +1,6 @@
 import { LegacyWallet } from './legacy-wallet';
 import * as bip39 from 'bip39';
-import * as BlueElectrum from '../BlueElectrum';
+import * as BlueElectrum from '../blue_modules/BlueElectrum';
 
 /**
  * @deprecated

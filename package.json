@@ -17,7 +17,6 @@
     "test:integration": "jest __tests__/integration/*"
   },
   "dependencies": {
-    "@photon-sdk/rn-electrum-client": "^4.0.0",
     "base-x": "^3.0.8",
     "bc-ur": "^0.1.6",
     "bech32": "^1.1.4",
@@ -30,13 +29,15 @@
     "chacha": "^2.1.0",
     "coinselect": "^3.1.12",
     "create-hash": "^1.2.0",
+    "electrum-client": "github:BlueWallet/rn-electrum-client#99ebcc649d91a8dc39bea7964b02dd9ead464aa4",
     "electrum-mnemonic": "^2.0.0",
     "frisbee": "^3.1.2",
+    "react-native-tcp-socket": "^5.6.2",
+    "realm": "^10.21.1",
     "util": "^0.12.3"
   },
   "peerDependencies": {
     "@photon-sdk/react-native-icloudstore": "^1.0.0",
-    "@photon-sdk/react-native-tcp": "^6.0.0",
     "@react-native-async-storage/async-storage": "^1.15.15",
     "@react-native-google-signin/google-signin": "^7.0.4",
     "@robinbobin/react-native-google-drive-api-wrapper": "^1.0.1",
@@ -45,7 +46,7 @@
     "react-native-randombytes": "^3.5.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.4",
+    "@babel/core": "^7.19.1",
     "@babel/runtime": "^7.10.4",
     "@photon-sdk/react-native-icloudstore": "^1.0.0",
     "@react-native-async-storage/async-storage": "^1.15.15",
@@ -66,9 +67,10 @@
     "eslint-plugin-react": "^7.20.3",
     "eslint-plugin-standard": "^4.0.2",
     "jest": "^26.1.0",
+    "metro-babel-register": "^0.72.3",
     "metro-react-native-babel-preset": "^0.63.0",
-    "react": "16.11.0",
-    "react-native": "0.62.2",
+    "react": "^18.0.0",
+    "react-native": "^0.69.5",
     "react-native-keychain": "^6.0.0"
   },
   "react-native": {
@@ -79,6 +81,9 @@
     "transform": {
       "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
     },
+    "transformIgnorePatterns": [
+      "node_modules/(?!@react-native|react-native|react-native-tcp-socket)"
+    ],
     "setupFiles": [
       "./__tests__/setup.js"
     ],

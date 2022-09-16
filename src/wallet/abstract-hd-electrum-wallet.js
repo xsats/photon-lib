@@ -4,7 +4,7 @@ import b58 from 'bs58check';
 import { randomBytes } from './rng';
 import { AbstractHDWallet } from './abstract-hd-wallet';
 import * as bitcoin from 'bitcoinjs-lib';
-import * as BlueElectrum from '../BlueElectrum';
+import * as BlueElectrum from '../blue_modules/BlueElectrum';
 import * as HDNode from 'bip32';
 import reverse from 'buffer-reverse';
 

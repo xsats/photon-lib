@@ -1,6 +1,6 @@
 import { HDSegwitBech32Wallet, SegwitBech32Wallet } from './';
 import * as bitcoin from 'bitcoinjs-lib';
-import * as BlueElectrum from '../BlueElectrum';
+import * as BlueElectrum from '../blue_modules/BlueElectrum';
 import reverse from 'buffer-reverse';
 import BigNumber from 'bignumber.js';
 

@@ -1,6 +1,7 @@
 import * as bitcoin from 'bitcoinjs-lib';
-import ElectrumClient from '@photon-sdk/rn-electrum-client';
 import assert from 'assert';
+
+const ElectrumClient = require('electrum-client');
 
 jasmine.DEFAULT_TIMEOUT_INTERVAL = 150 * 1000;
 
@@ -16,7 +17,7 @@ const hardcodedPeers = [
 describe('ElectrumClient', () => {
   it('can connect and query', async () => {
     for (const peer of hardcodedPeers) {
-      const mainClient = new ElectrumClient(peer.ssl || peer.tcp, peer.host, peer.ssl ? 'tls' : 'tcp');
+      const mainClient = new ElectrumClient(global.net, global.tls, peer.ssl || peer.tcp, peer.host, peer.ssl ? 'tls' : 'tcp');
 
       try {
         await mainClient.connect();
