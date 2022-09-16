@@ -17,6 +17,12 @@ const hardcodedPeers = [
 describe('ElectrumClient', () => {
   it('can connect and query', async () => {
     for (const peer of hardcodedPeers) {
+      console.log("CHECKING ELECTRUM CLIENT");
+      console.log("NET");
+      console.log(global.net);
+      console.log("TLS");
+      console.log(global.tls);
+
       const mainClient = new ElectrumClient(global.net, global.tls, peer.ssl || peer.tcp, peer.host, peer.ssl ? 'tls' : 'tcp');
 
       try {

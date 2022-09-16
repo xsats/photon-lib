@@ -103,7 +103,7 @@ export async function connectMain(options) {
 
   try {
     console.log('begin connection:', JSON.stringify(usingPeer));
-    mainClient = new ElectrumClient(usingPeer.ssl || usingPeer.tcp, usingPeer.host, usingPeer.ssl ? 'tls' : 'tcp');
+    mainClient = new ElectrumClient(global.net, global.tls, usingPeer.ssl || usingPeer.tcp, usingPeer.host, usingPeer.ssl ? 'tls' : 'tcp');
     mainClient.onError = function (e) {
       if (mainConnected) {
         // most likely got a timeout from electrum ping. lets reconnect
@@ -807,8 +807,7 @@ export const calculateBlockTime = function (height) {
  */
 export const testConnection = async function (host, tcpPort, sslPort) {
   // const isTorDisabled = await isTorDaemonDisabled();
-  const client = new ElectrumClient(
-    // host.endsWith('.onion') && !isTorDisabled ? torrific : 
+  const client = new ElectrumClient( 
     global.net,
     global.tls,
     sslPort || tcpPort,
