@@ -984,6 +984,24 @@ export class AbstractHDElectrumWallet extends AbstractHDWallet {
   }
 
   /**
+   * 
+   * @param {string} psbtHex 
+   * @param {number} keyIndex 
+   * @returns string
+   */
+  signPsbt(psbtHex, keyIndex) {
+    const psbt = bitcoin.Psbt.fromBase64(psbtHex);
+
+    const wif = this._getWIFByIndex(false, keyIndex);
+    const signer = bitcoin.ECPair.fromWIF(wif);
+
+    psbt.signInput(0, signer);
+    const signedPsbtText = psbt.toBase64();
+
+    return signedPsbtText;
+  }
+
+  /**
    * Creates Segwit Bech32 Bitcoin address
    *
    * @param hdNode
