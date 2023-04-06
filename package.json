@@ -38,9 +38,6 @@
   "peerDependencies": {
     "@photon-sdk/react-native-icloudstore": "^1.0.0",
     "@photon-sdk/react-native-tcp": "^6.0.0",
-    "@react-native-async-storage/async-storage": "^1.15.15",
-    "@react-native-google-signin/google-signin": "^7.0.4",
-    "@robinbobin/react-native-google-drive-api-wrapper": "^1.0.1",
     "node-libs-react-native": "^1.2.0",
     "react-native-keychain": "^6.0.0",
     "react-native-randombytes": "^3.5.3"
@@ -49,10 +46,7 @@
     "@babel/core": "^7.10.4",
     "@babel/runtime": "^7.10.4",
     "@photon-sdk/react-native-icloudstore": "^1.0.0",
-    "@react-native-async-storage/async-storage": "^1.15.15",
     "@react-native-community/eslint-config": "^2.0.0",
-    "@react-native-google-signin/google-signin": "^7.0.4",
-    "@robinbobin/react-native-google-drive-api-wrapper": "^1.0.1",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.1.0",
     "eslint": "^7.5.0",

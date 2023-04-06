@@ -5,10 +5,9 @@
 
 import { Platform } from 'react-native';
 import RNiCloudStorage from '@photon-sdk/react-native-icloudstore';
-import * as GDriveCloudStorage from './GDriveCloudStorage';
 import { isPhone, isEmail, isId, isBuffer } from './verify';
 
-const Store = Platform.OS === 'ios' ? RNiCloudStorage : GDriveCloudStorage;
+const Store = Platform.OS === 'ios' ? RNiCloudStorage : null;
 
 const VERSION = '1';
 const KEY_ID = `${VERSION}_photon_key_id`;
